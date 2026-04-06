@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: soma-api
+  labels:
+    app: soma-api
+spec:
+  containers:
+    - name: soma-api
+      image: loppzh/soma-api
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 8000

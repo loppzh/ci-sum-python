@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: soma-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: soma-api
+  template:
+    metadata:
+      labels:
+        app: soma-api
+    spec:
+      containers:
+        - name: soma-api
+          image: loppzh/soma-api:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8000

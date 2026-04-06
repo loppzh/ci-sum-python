@@ -1,0 +1,10 @@
+# Ignorar binários e arquivos locais
+kubectl
+
+# Python
+__pycache__/
+*.pyc
+
+# Ambiente virtual (se usar depois)
+venv/
+.env
